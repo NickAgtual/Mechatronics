@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -18.6, "left": 18.6, "attrs": {} },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": -164.75,
+      "left": 65.91,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -190.25,
+      "left": -3.85,
+      "attrs": { "color": "yellow" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 41.91, "left": 333.51, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": 42.82, "left": 437.3, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -226.53,
+      "left": 256.68,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -158.21,
+      "left": 258.25,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": -199.83,
+      "left": 310.08,
+      "attrs": { "value": "330" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": -124.44,
+      "left": 310.08,
+      "attrs": { "value": "330" }
+    }
+  ],
+  "connections": [
+    [ "led2:A", "r1:1", "green", [ "v0" ] ],
+    [ "led2:C", "uno:GND.2", "green", [ "v-3.18", "h-66.28", "v364.73", "h239.92" ] ],
+    [ "pot1:GND", "uno:GND.3", "black", [ "v98", "h-165.3" ] ],
+    [ "pot1:VCC", "uno:5V", "red", [ "v128.62", "h-200.68" ] ],
+    [ "pot1:SIG", "uno:A0", "green", [ "v112.13", "h-133.25" ] ],
+    [ "pot2:VCC", "uno:5V", "red", [ "v149.7", "h-305.26" ] ],
+    [ "pot2:GND", "uno:GND.3", "black", [ "v137.14", "h-265.95" ] ],
+    [ "pot2:SIG", "uno:A1", "green", [ "v143.42", "h-237.04" ] ],
+    [ "led3:C", "uno:GND.2", "green", [ "v16.01", "h-286.71", "v323.53", "h201.03" ] ],
+    [ "led1:C", "led3:C", "green", [ "v33.28", "h-31.49", "v29.84" ] ],
+    [ "led1:A", "r2:1", "green", [ "v0" ] ],
+    [ "led3:A", "r3:1", "green", [ "v0" ] ],
+    [ "uno:3", "r1:2", "green", [ "v-56.05", "h-94.72", "v-7.85" ] ],
+    [ "uno:2", "r3:2", "green", [ "v-54.48", "h139.21", "v-51.83", "h1.57" ] ],
+    [ "uno:4", "r2:2", "green", [ "v-78.04", "h191.98", "v2.36" ] ]
+  ]
+}
